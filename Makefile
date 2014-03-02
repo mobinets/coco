@@ -1,0 +1,3 @@
+COMPONENT=CocoAppC
+include $(MAKERULES)
+
