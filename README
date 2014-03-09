@@ -1,7 +1,18 @@
-version: PCQ
-Changes: 
-1. The time slots changed to be 3 slots. (TX, SLEEP, RX)
-2. REQ: eliminate the seqno in the data packets. 
+version: PCQ (see desc. in the paper)
+====
+The time slots changed to be 3 slots. (TX, SLEEP, RX)
+
+REQ:
+====
+
+REQ: eliminate the seqno in the data packets. 
 		REQ carries a startByte and the following 6 bytes as vectors.
-			Send: format.
-			Receive: To avoid that REQ marks the unreceived packet as a packet to send, before the OR operation, the unreceived bits in the received REQ should be clear.
+		Send: format.
+		Receive: To avoid that REQ marks the unreceived packet as a packet to send, before the OR operation, the unreceived bits in the received REQ should be clear.
+3. SLEEP slot is not real
+====
+just accounting the slot time duration in the logs.
+
+Please note that you should add channel "CoCo" in the run.py file to record the logs.
+
+
